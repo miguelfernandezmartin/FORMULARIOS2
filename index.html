@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Registro</title>
+    <!--
+    <style>
+        label {
+            border: 2px solid blue;
+            background-color: lightblue;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 5px;
+            width: 100px;
+        }
+        input,
+        select {
+            padding: 5px;
+        }
+    </style>
+    -->
+</head>
+
+<body>
+    <h1>Formulario de registro</h1>
+    <form action="procesaRegistro.php" method="get">
+        <fieldset>
+            <legend>Datos Personales</legend>
+            <p>
+                <label for="nom">Nombre: </label>
+                <input type="text" name="nombre" id="nom" maxlength="6">
+            </p>
+            <p>
+                <label for="contrase">Contraseña: </label>
+                <input type="password" name="contrase" id="contrase" maxlength="8" minlength="6" required>
+            </p>
+            <p>
+                <label for="hombre">Hombre: </label>
+                <input type="radio" name="genero" value="H" id="hombre">
+                <label for="mujer">Mujer: </label>
+                <input type="radio" name="genero" value="M" id="mujer" checked>
+            </p>
+            <p>
+                <label for="fuma">Fumador/a: </label>
+                <input type="checkbox" name="fuma" id="fuma">
+            </p>
+        </fieldset>
+        <fieldset>
+            <p>
+                <label for="comunidad">Provincia:</label>
+                <select name="comunidadautonoma" id="comunidad" required>
+                    <option value="1" selected>Toledo</option>
+                    <option value="2">Ciudad Real</option>
+                    <option value="3">Cuenca</option>
+                    <option value="4">Albacete</option>
+                    <option value="5">Guadalajara</option>
+                </select>
+            </p>
+            <p>
+                <label for="obs">Observaciones:</label>
+                <textarea name="obs" id="obs" cols="10" rows="6">
+                    Escriba algo...
+                </textarea>
+            </p>
+            <p>
+                <label for="color">Color: </label>
+                <input type="color" name="color" id="color">
+            </p>
+            <p>
+                <label for="fecha-nac">Fecha de nacimiento: </label>
+                <input type="date" name="fecha-nac" id="fecha-nac">
+            </p>
+            <p>
+                <label for="edad">Edad: </label>
+                <input type="number" name="edad" id="edad" min="0" max="100">
+            </p>
+            <p>
+                <label for="email">Email: </label>
+                <input type="email" name="email" id="email">
+            </p>
+            <p>
+                <label for="foto">Adjuntar foto: </label>
+                <input type="file" name="foto" id="foto">
+            </p>
+        </fieldset>
+        <input style="margin-top: 10px;" type="submit" value="Hacer Registro">
+        <input style="margin-top: 10px;" type="reset" value="Reiniciar Registro">
+    </form>
+</body>
+
+</html>
