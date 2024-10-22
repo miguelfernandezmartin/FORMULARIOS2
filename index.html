@@ -23,17 +23,24 @@
 </head>
 
 <body>
-    <h1>Formulario de registro</h1>
+    <h1>Tipos de Inputs</h1>
     <form action="procesaRegistro.php" method="get">
         <fieldset>
             <legend>Datos Personales</legend>
             <p>
                 <label for="nom">Nombre: </label>
-                <input type="text" name="nombre" id="nom" maxlength="6">
+                <input type="text" name="nombre" id="nom" maxlength="6"
+                placeholder="Escriba su nombre completo" required>
+            </p>
+            <p>
+                <label for="pob">Población:</label>
+                <input type="text" value="Alcázar de San Juan" 
+                name="pob" maxlength="50" disabled autofocus>
             </p>
             <p>
                 <label for="contrase">Contraseña: </label>
-                <input type="password" name="contrase" id="contrase" maxlength="8" minlength="6" required>
+                <input type="password" name="contrase" id="contrase" 
+                maxlength="6" minlength="4" required>
             </p>
             <p>
                 <label for="hombre">Hombre: </label>
@@ -43,7 +50,7 @@
             </p>
             <p>
                 <label for="fuma">Fumador/a: </label>
-                <input type="checkbox" name="fuma" id="fuma">
+                <input type="checkbox" name="fuma" id="fuma" checked>
             </p>
         </fieldset>
         <fieldset>
